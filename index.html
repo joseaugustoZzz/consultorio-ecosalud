@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<!-- 
+  =============================================================================
+  PROYECTO: CONSULTORIO MÉDICO ECOSALUD
+  ARCHIVO: index.html
+  NIVEL: BTH (Bachillerato Técnico Humanístico)
+  ESTILO: Diseño artesanal, profesional, armónico y de propósito claro.
+  =============================================================================
+-->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultorio Médico ECOSALUD | Atención Médica Integral</title>
+    
+    <!-- Favicon del consultorio -->
+    <link rel="icon" href="ecosalud logo.jpeg" type="image/jpeg">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Tipografía Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ==========================================================================
+         BARRA SUPERIOR INSTITUCIONAL (TOP BAR)
+         ========================================================================== -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-left">
+                <div class="top-bar-item">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    <span>Línea Directa: <strong>(+591) 700-00000</strong></span>
+                </div>
+                <div class="top-bar-item">
+                    <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                    <span>Lun - Vie: 08:00 a 18:00 | Sáb: 08:00 a 13:00</span>
+                </div>
+            </div>
+            <div class="top-bar-right">
+                <span class="top-bar-badge">Consultorio Médico • Trinidad / Santa Cruz</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         1. BARRA DE NAVEGACIÓN (NAVBAR LIMPIA SIN BOTONES REPETIDOS)
+         ========================================================================== -->
+    <header class="navbar">
+        <div class="container nav-container">
+            
+            <a href="#inicio" class="logo">
+                <img src="ecosalud logo.jpeg" class="logo-img" alt="Logotipo Consultorio Médico Ecosalud">
+                <div class="logo-text-block">
+                    <span class="logo-title">ECO<span>SALUD</span></span>
+                    <span class="logo-subtitle">Consultorio Médico</span>
+                </div>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación">
+                ☰
+            </button>
+
+            <!-- Menú limpio: cada enlace cumple una función distinta sin duplicidad -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#equipo">Especialistas</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#testimonios">Opiniones</a></li>
+                <li><a href="#faq">Preguntas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <!-- Único botón destacado de la barra -->
+                <li><a href="#reservas" class="nav-cta">Reservar Turno</a></li>
+            </ul>
+
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+         2. SECCIÓN HERO (PORTADA PRINCIPAL)
+         ========================================================================== -->
+    <section class="hero" id="inicio">
+        <div class="container hero-grid">
+            
+            <div class="hero-content">
+                <span class="section-kicker">Atención Médica Profesional</span>
+                <h1 class="hero-title">
+                    Diagnóstico certero y atención médica para <span>toda tu familia</span>
+                </h1>
+                
+                <p class="hero-paragraph">
+                    En el <strong>Consultorio Médico Ecosalud</strong> combinamos experiencia clínica, tecnología de diagnóstico por imagen y laboratorio bioquímico con aranceles accesibles y trato humano.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#reservas" class="btn btn-primary">Reservar Turno</a>
+                    <a href="#servicios" class="btn btn-outline">Ver Especialidades</a>
+                </div>
+
+                <div class="hero-stats-row">
+                    <div class="stat-card">
+                        <strong>+10 Años</strong>
+                        <span>Experiencia clínica</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>Atención Diaria</strong>
+                        <span>Turnos mañana y tarde</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>Resultados</strong>
+                        <span>Entrega el mismo día</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-card">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Médico especialista atendiendo en consultorio">
+                <div class="hero-image-badge">
+                    <h5>Atención Médica Directa</h5>
+                    <p>Médicos especialistas de turno • Sin esperas innecesarias</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. FLUJO DE ATENCIÓN EN 3 PASOS
+         ========================================================================== -->
+    <section class="steps-bar-section">
+        <div class="container steps-grid">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div>
+                    <h4>Elige el servicio médico</h4>
+                    <p>Selecciona medicina general, laboratorio, ecografía o pediatría.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div>
+                    <h4>Agenda tu fecha y horario</h4>
+                    <p>Elige tu día preferido y el médico asignado a la consulta.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div>
+                    <h4>Confirmación inmediata</h4>
+                    <p>Tu turno se guarda en el sistema y puedes reconfirmar por WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. SECCIÓN SERVICIOS (TARJETAS LIMPIAS + BANNER CENTRAL)
+         ========================================================================== -->
+    <section class="services-section" id="servicios">
+        <div class="container">
+            
+            <div class="section-header text-center">
+                <span class="section-kicker">Cartera de Prestaciones</span>
+                <h2 class="section-title">Especialidades Médicas</h2>
+                <p class="section-desc">
+                    Consulta nuestros servicios clínicos y estudios de diagnóstico disponibles para agendar.
+                </p>
+            </div>
+
+            <div class="services-filter-bar">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">Todas las áreas</button>
+                    <button class="filter-btn" data-filter="consultas">Consultas Clínicas</button>
+                    <button class="filter-btn" data-filter="diagnostico">Diagnóstico y Laboratorio</button>
+                    <button class="filter-btn" data-filter="especialidad">Especialidades</button>
+                </div>
+                <div class="search-field">
+                    <input type="text" id="search-services" placeholder="Buscar por servicio médico...">
+                </div>
+            </div>
+
+            <div class="services-grid" id="services-container">
+                
+                <!-- Servicio 1: Medicina General -->
+                <article class="service-card" data-category="consultas">
+                    <div class="service-card-top">
+                        <div class="service-icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M19 8c0-2.21-1.79-4-4-4h-1V2h-2v2H8c-2.21 0-4 1.79-4 4v5c0 3.08 2.34 5.62 5.38 5.96C10.05 20.35 11.45 22 13.5 22c2.48 0 4.5-2.02 4.5-4.5V13h-2v4.5c0 1.38-1.12 2.5-2.5 2.5-1.15 0-2.12-.78-2.42-1.84C13.55 17.65 16 15.1 16 12V8h3zM6 8c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v4c0 2.21-1.79 4-4 4s-4-1.79-4-4V8z"/></svg>
+                        </div>
+                        <span class="service-tag">Consulta Externa</span>
+                    </div>
+                    <h3>Medicina General</h3>
+                    <p>Evaluación clínica completa, diagnóstico temprano de patologías comunes, control de presión arterial y prescripción farmacológica responsable.</p>
+                    <div class="service-card-footer">
+                        <span class="service-availability">Turno Mañana y Tarde</span>
+                        <button class="service-quick-select" data-target-service="medicina-general">Elegir servicio ↓</button>
+                    </div>
+                </article>
+
+                <!-- Servicio 2: Laboratorio Clínico -->
+                <article class="service-card" data-category="diagnostico">
+                    <div class="service-card-top">
+                        <div class="service-icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M7 19c-1.1 0-2 .9-2 2h14c0-1.1-.9-2-2-2h-4v-2h3c1.66 0 3-1.34 3-3V7.5c0-.83-.67-1.5-1.5-1.5S16 6.67 16 7.5V14h-3v-2.17c1.76-.77 3-2.54 3-4.83 0-2.76-2.24-5-5-5s-5 2.24-5 5c0 2.29 1.24 4.06 3 4.83V17H7v2zm4-12c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3z"/></svg>
+                        </div>
+                        <span class="service-tag">Bioquímica</span>
+                    </div>
+                    <h3>Laboratorio Clínico</h3>
+                    <p>Hemograma automatizado, perfil lipídico, glucemia en ayunas, examen general de orina, coproparasitológico y pruebas bioquímicas rápidas.</p>
+                    <div class="service-card-footer">
+                        <span class="service-availability">Resultados en el día</span>
+                        <button class="service-quick-select" data-target-service="laboratorio">Elegir servicio ↓</button>
+                    </div>
+                </article>
+
+                <!-- Servicio 3: Ecografía Integral -->
+                <article class="service-card" data-category="diagnostico">
+                    <div class="service-card-top">
+                        <div class="service-icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6zm-2 16c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+                        </div>
+                        <span class="service-tag">Imagenología</span>
+                    </div>
+                    <h3>Ecografía Integral</h3>
+                    <p>Ecografía abdominal superior, pélvica, obstétrica de control gestacional, renal y partes blandas con informe médico detallado e impreso.</p>
+                    <div class="service-card-footer">
+                        <span class="service-availability">Equipos Digitales</span>
+                        <button class="service-quick-select" data-target-service="ecografia">Elegir servicio ↓</button>
+                    </div>
+                </article>
+
+                <!-- Servicio 4: Pediatría -->
+                <article class="service-card" data-category="especialidad">
+                    <div class="service-card-top">
+                        <div class="service-icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+                        </div>
+                        <span class="service-tag">Salud Infantil</span>
+                    </div>
+                    <h3>Pediatría</h3>
+                    <p>Control del niño sano, curvas de crecimiento y desarrollo somatométrico, asesoría en lactancia materna y tratamiento de infecciones infantiles.</p>
+                    <div class="service-card-footer">
+                        <span class="service-availability">Control y Vacunación</span>
+                        <button class="service-quick-select" data-target-service="pediatria">Elegir servicio ↓</button>
+                    </div>
+                </article>
+
+                <!-- Servicio 5: Odontología -->
+                <article class="service-card" data-category="especialidad">
+                    <div class="service-card-top">
+                        <div class="service-icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.5 2 6 4.5 6 7.5c0 2.8 1.5 5.5 2.5 8.5.8 2.4 1.5 5 3.5 5s2.7-2.6 3.5-5c1-3 2.5-5.7 2.5-8.5C18 4.5 15.5 2 12 2zm0 15c-.8 0-1.5-1.5-2.2-3.8C8.9 10.8 8 8.8 8 7.5 8 5.6 9.8 4 12 4s4 1.6 4 3.5c0 1.3-.9 3.3-1.8 5.7-.7 2.3-1.4 3.8-2.2 3.8z"/></svg>
+                        </div>
+                        <span class="service-tag">Salud Dental</span>
+                    </div>
+                    <h3>Odontología General</h3>
+                    <p>Limpieza dental profunda (profilaxis ultrasónica), restauraciones estéticas con resina fotocurable, sellantes y prevención de caries.</p>
+                    <div class="service-card-footer">
+                        <span class="service-availability">Atención Integral</span>
+                        <button class="service-quick-select" data-target-service="odontologia">Elegir servicio ↓</button>
+                    </div>
+                </article>
+
+                <!-- Servicio 6: Chequeo Médico Preventivo -->
+                <article class="service-card" data-category="consultas">
+                    <div class="service-card-top">
+                        <div class="service-icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </div>
+                        <span class="service-tag">Prevención</span>
+                    </div>
+                    <h3>Chequeo Clínico Anual</h3>
+                    <p>Paquete preventivo orientado a la detección temprana de diabetes, hipertensión arterial y dislipidemias en adultos y adultos mayores.</p>
+                    <div class="service-card-footer">
+                        <span class="service-availability">Evaluación General</span>
+                        <button class="service-quick-select" data-target-service="medicina-general">Elegir servicio ↓</button>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Banner central único: reemplaza los botones repetitivos de cada tarjeta -->
+            <div class="services-cta-banner">
+                <div class="services-cta-text">
+                    <h4>¿Deseas programar tu turno con alguno de nuestros especialistas?</h4>
+                    <p>Completa la ficha en línea en menos de un minuto y asegura tu horario de atención.</p>
+                </div>
+                <a href="#reservas" class="btn btn-primary">Completar Ficha de Turno</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. SECCIÓN ESPECIALISTAS MÉDICOS (EQUIPO PROFESIONAL)
+         ========================================================================== -->
+    <section class="team-section" id="equipo">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-kicker">Cuerpo Médico</span>
+                <h2 class="section-title">Nuestros Profesionales</h2>
+                <p class="section-desc">Especialistas comprometidos con el diagnóstico oportuno y el trato humano.</p>
+            </div>
+
+            <div class="team-grid">
+                
+                <div class="doctor-card">
+                    <div class="doctor-header">
+                        <div class="doctor-avatar">CR</div>
+                        <div>
+                            <h4>Dr. Carlos Rojas</h4>
+                            <span>Medicina General</span>
+                        </div>
+                    </div>
+                    <p>Médico cirujano titulado con amplia experiencia en atención primaria, manejo de enfermedades crónicas y medicina preventiva.</p>
+                    <div class="doctor-meta">
+                        <span>Col. Médico N° 4582</span>
+                        <strong>Turno Mañana</strong>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-header">
+                        <div class="doctor-avatar">PS</div>
+                        <div>
+                            <h4>Dra. Patricia Suárez</h4>
+                            <span>Imagenología y Ecografía</span>
+                        </div>
+                    </div>
+                    <p>Especialista en ecografía diagnóstica obstétrica, abdominal y de partes blandas con informe médico protocolizado.</p>
+                    <div class="doctor-meta">
+                        <span>Col. Médico N° 3914</span>
+                        <strong>Turno Mañana y Tarde</strong>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-header">
+                        <div class="doctor-avatar">MS</div>
+                        <div>
+                            <h4>Lic. Mariana Soliz</h4>
+                            <span>Bioquímica y Análisis Clínico</span>
+                        </div>
+                    </div>
+                    <p>Responsable del área de laboratorio con estricto control de calidad analítico en pruebas hematológicas y serológicas.</p>
+                    <div class="doctor-meta">
+                        <span>Col. Bioquímicos N° 1208</span>
+                        <strong>Lunes a Sábado</strong>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. SECCIÓN NOSOTROS (VALORES INSTITUCIONALES)
+         ========================================================================== -->
+    <section class="about-section" id="nosotros">
+        <div class="container about-grid">
+            
+            <div class="about-photo-wrapper">
+                <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=700&q=80" alt="Consultorio médico de Ecosalud">
+            </div>
+
+            <div class="about-text-content">
+                <span class="section-kicker">Sobre Nuestro Consultorio</span>
+                <h2 class="section-title">Compromiso con la Salud de la Comunidad</h2>
+                <p>
+                    El <strong>Consultorio Médico Ecosalud</strong> fue fundado para ofrecer a las familias una alternativa de salud accesible y confiable. Combinamos ética médica, equipos actualizados y personal capacitado para acompañarte en cada etapa de tu tratamiento.
+                </p>
+
+                <div class="about-points">
+                    <div class="point-card">
+                        <h4>Atención Médica Ética</h4>
+                        <p>Tratamientos justificados y diagnósticos respaldados por estudios clínicos.</p>
+                    </div>
+                    <div class="point-card">
+                        <h4>Aranceles Solidarios</h4>
+                        <p>Servicios médicos accesibles a la economía de nuestra comunidad.</p>
+                    </div>
+                    <div class="point-card">
+                        <h4>Higiene y Bioseguridad</h4>
+                        <p>Desinfección continua de consultorios y material esterilizado.</p>
+                    </div>
+                    <div class="point-card">
+                        <h4>Puntualidad en Turnos</h4>
+                        <p>Atención programada para optimizar el tiempo de cada paciente.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. MÓDULO DE RESERVAS DE TURNOS (COMPONENTE CENTRAL BTH)
+         ========================================================================== -->
+    <section class="booking-section" id="reservas">
+        <div class="container">
+            
+            <div class="section-header text-center">
+                <span class="section-kicker">Gestión de Consultas</span>
+                <h2 class="section-title">Formulario de Reserva de Turnos</h2>
+                <p class="section-desc">
+                    Registra tu turno médico. Los datos se almacenan localmente y podrás reconfirmar directamente a nuestra recepción por WhatsApp.
+                </p>
+            </div>
+
+            <div class="booking-layout">
+                
+                <div class="form-panel">
+                    <div class="panel-header">
+                        <h3 class="panel-title">Ficha de Reserva del Paciente</h3>
+                        <p class="panel-subtitle">Los campos señalados con asterisco (*) son obligatorios.</p>
+                    </div>
+
+                    <form id="booking-form">
+                        
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="patient-name">Nombre y Apellidos *</label>
+                                <input type="text" id="patient-name" placeholder="Ej. Carlos Mendoza" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="patient-phone">Teléfono / WhatsApp *</label>
+                                <input type="tel" id="patient-phone" placeholder="Ej. 70000000" pattern="[0-9]{8,12}" required>
+                                <span class="field-help">Número de 8 a 12 dígitos</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="specialty-select">Especialidad Requerida *</label>
+                                <select id="specialty-select" required>
+                                    <option value="">-- Seleccionar especialidad --</option>
+                                    <option value="medicina-general">Medicina General</option>
+                                    <option value="laboratorio">Laboratorio Clínico</option>
+                                    <option value="ecografia">Ecografía Integral</option>
+                                    <option value="pediatria">Pediatría</option>
+                                    <option value="odontologia">Odontología</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="doctor-select">Médico Asignado *</label>
+                                <select id="doctor-select" required disabled>
+                                    <option value="">-- Elige primero una especialidad --</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="date-input">Fecha de Atención *</label>
+                                <input type="date" id="date-input" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="time-select">Horario Disponible *</label>
+                                <select id="time-select" required>
+                                    <option value="">-- Seleccionar horario --</option>
+                                    <option value="08:30 AM">08:30 AM (Mañana)</option>
+                                    <option value="09:30 AM">09:30 AM (Mañana)</option>
+                                    <option value="10:30 AM">10:30 AM (Mañana)</option>
+                                    <option value="11:30 AM">11:30 AM (Mañana)</option>
+                                    <option value="02:30 PM">02:30 PM (Tarde)</option>
+                                    <option value="03:30 PM">03:30 PM (Tarde)</option>
+                                    <option value="04:30 PM">04:30 PM (Tarde)</option>
+                                    <option value="05:30 PM">05:30 PM (Tarde)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="patient-notes">Motivo de Consulta (Opcional)</label>
+                            <textarea id="patient-notes" rows="2" placeholder="Describe brevemente síntomas o motivo de la visita médica..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Registrar y Confirmar Turno
+                        </button>
+                    </form>
+                </div>
+
+                <div class="records-panel">
+                    <div class="panel-header">
+                        <h3 class="panel-title">Turnos en este Navegador</h3>
+                        <p class="panel-subtitle">Historial de citas guardadas en LocalStorage.</p>
+                    </div>
+
+                    <div id="appointments-list" class="appointments-scroll">
+                        <!-- Generado dinámicamente con JavaScript -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. TESTIMONIOS Y EXPERIENCIA DE PACIENTES
+         ========================================================================== -->
+    <section class="testimonials-section" id="testimonios">
+        <div class="container">
+            
+            <div class="section-header text-center">
+                <span class="section-kicker">Experiencias</span>
+                <h2 class="section-title">Opiniones de Nuestros Pacientes</h2>
+                <p class="section-desc">Testimonios de usuarios que asisten a nuestras consultas y estudios.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>
+                        "Fui por una consulta de medicina general y quedé muy conforme con la explicación clara de la doctora. Además, los medicamentos prescritos fueron accesibles y efectivos."
+                    </blockquote>
+                    <div class="patient-info">
+                        <strong>María Choque V.</strong>
+                        <span>Paciente de Medicina General</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>
+                        "Los análisis clínicos de laboratorio estuvieron listos por la tarde tal como me indicaron. Personal muy atento y resultados debidamente membretados."
+                    </blockquote>
+                    <div class="patient-info">
+                        <strong>Roberto Gutiérrez L.</strong>
+                        <span>Paciente de Laboratorio Clínico</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>
+                        "La atención pediátrica para mi hijo fue muy dedicada. El médico se tomó el tiempo para revisarlo completamente y responder todas nuestras dudas con paciencia."
+                    </blockquote>
+                    <div class="patient-info">
+                        <strong>Silvia Fernández P.</strong>
+                        <span>Atención Pediátrica</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. PREGUNTAS FRECUENTES (FAQ ACORDEÓN)
+         ========================================================================== -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            
+            <div class="section-header text-center">
+                <span class="section-kicker">Dudas Habituales</span>
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <p class="section-desc">Información relevante para tu visita al consultorio.</p>
+            </div>
+
+            <div class="faq-wrapper">
+                
+                <div class="faq-card">
+                    <button class="faq-header">
+                        <span>¿Es obligatorio reservar turno previo o atienden por orden de llegada?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-body">
+                        <p>Atendemos por orden de llegada para consultas médicas espontáneas; sin embargo, reservar tu turno en este portal web te asegura horario preferente y menor tiempo en sala de espera.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-header">
+                        <span>¿Cuál es el tiempo de entrega de los resultados de laboratorio?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-body">
+                        <p>Los análisis de rutina (sangre, orina, heces, glucosa) se entregan el mismo día a partir de las 16:00 horas en formato impreso y opcionalmente en formato digital por WhatsApp.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-header">
+                        <span>¿Qué preparación previa se requiere para una ecografía abdominal?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-body">
+                        <p>Se recomienda un ayuno de 6 horas para ecografía abdominal general. En ecografías pélvicas o prostáticas, el paciente debe beber 1 litro de agua sin gas una hora antes del examen con vejiga llena.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-header">
+                        <span>¿Cuáles son las modalidades de pago aceptadas?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-body">
+                        <p>Aceptamos pagos en efectivo, transferencias bancarias directas mediante código QR y pagos con tarjeta de débito en recepción.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         10. CONTACTO Y UBICACIÓN
+         ========================================================================== -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            
+            <div class="section-header text-center">
+                <span class="section-kicker">Localización</span>
+                <h2 class="section-title">Ubicación y Canales de Atención</h2>
+                <p class="section-desc">Visítanos directamente o comunícate con nuestra secretaría.</p>
+            </div>
+
+            <div class="contact-grid">
+                
+                <div class="contact-info-panel">
+                    
+                    <div class="info-card">
+                        <h4>Dirección</h4>
+                        <p>Consultorio Médico ECOSALUD</p>
+                        <p>Santa Cruz / Trinidad, Bolivia</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Líneas Telefónicas</h4>
+                        <p>(+591) 700-00000 (Consultas y Turnos)</p>
+                        <p>(+591) 721-11111 (Recepción Central)</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Horario de Atención</h4>
+                        <p>Lunes a Viernes: 08:00 a 18:00 (Continuado)</p>
+                        <p>Sábados: 08:00 a 13:00</p>
+                        <p>Domingos y Feriados: Cerrado</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Correo Institucional</h4>
+                        <p>contacto@ecosalud.com</p>
+                    </div>
+
+                </div>
+
+                <div class="map-card">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d340.9013657032016!2d-64.91035665135419!3d-14.833187544576939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93dd71dfa8d57945%3A0xd4fe77e2be737aeb!2sconsultorio%20medico%20ECOSALUD!5e0!3m2!1ses-419!2sbo!4v1784934686449!5m2!1ses-419!2sbo"
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        title="Mapa de localización de Ecosalud">
+                    </iframe>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         11. PIE DE PÁGINA (FOOTER)
+         ========================================================================== -->
+    <footer>
+        <div class="container footer-grid">
+            
+            <div class="footer-col">
+                <h4>Consultorio Médico Ecosalud</h4>
+                <p>
+                    Centro de atención médica integral enfocado en la prevención, diagnóstico precoz y cuidado de la salud en la comunidad.
+                </p>
+                <p style="font-size: 11.5px; color: #7f95ac;">
+                    Proyecto desarrollado para la titulación en Bachillerato Técnico Humanístico (BTH).
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul class="footer-nav">
+                    <li><a href="#inicio">Página Principal</a></li>
+                    <li><a href="#servicios">Servicios Médicos</a></li>
+                    <li><a href="#equipo">Cuerpo Médico</a></li>
+                    <li><a href="#nosotros">Acerca del Consultorio</a></li>
+                    <li><a href="#reservas">Reservar Turno</a></li>
+                    <li><a href="#contacto">Ubicación y Horarios</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contacto Directo</h4>
+                <p>Teléfono: (+591) 700-00000</p>
+                <p>Dirección: Consultorio Médico Ecosalud</p>
+                <p>
+                    <a href="https://wa.me/59170000000" target="_blank" rel="noopener noreferrer" style="color: #25d366; font-weight: 600;">
+                        WhatsApp Recepción →
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 Consultorio Médico Ecosalud. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+         BOTÓN FLOTANTE DIRECTO A WHATSAPP
+         ========================================================================== -->
+    <div class="whatsapp-widget">
+        <span class="whatsapp-bubble">¿Dudas? Escríbenos</span>
+        <a href="https://wa.me/59170000000?text=Hola%20Ecosalud,%20deseo%20hacer%20una%20consulta" class="whatsapp-button" target="_blank" rel="noopener noreferrer" title="Contactar por WhatsApp">
+            <svg viewBox="0 0 24 24">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.05 7.42C8.86 7.42 8.55 7.49 8.29 7.78C8.03 8.06 7.3 8.75 7.3 10.15C7.3 11.55 8.32 12.9 8.46 13.09C8.6 13.29 10.42 16.19 13.27 17.32C15.63 18.27 16.12 18.08 16.64 18.03C17.15 17.98 18.3 17.35 18.54 16.68C18.78 16 18.78 15.42 18.71 15.3C18.64 15.18 18.45 15.11 18.16 14.97C17.87 14.82 16.45 14.12 16.19 14.03C15.93 13.93 15.74 13.88 15.54 14.17C15.35 14.46 14.81 15.11 14.64 15.3C14.47 15.5 14.31 15.52 14.02 15.37C13.73 15.23 12.8 14.92 11.69 13.93C10.82 13.16 10.24 12.2 10.1 11.96C9.96 11.72 10.08 11.58 10.23 11.44C10.36 11.31 10.52 11.09 10.66 10.92C10.81 10.75 10.86 10.63 10.95 10.44C11.05 10.25 11 10.08 10.93 9.93C10.86 9.79 10.27 8.33 10.03 7.75C9.79 7.18 9.55 7.26 9.37 7.25C9.21 7.24 9.05 7.42 9.05 7.42Z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- ==========================================================================
+         VENTANA MODAL DE CONFIRMACIÓN
+         ========================================================================== -->
+    <div class="modal-overlay" id="confirmation-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Resumen de Turno Agendado</h3>
+                <p>Verifica los datos de la reserva antes de enviar a recepción.</p>
+            </div>
+            
+            <div class="modal-details" id="modal-summary-content">
+                <!-- Se llena mediante JavaScript -->
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn btn-primary btn-block" id="modal-whatsapp-btn">
+                    Enviar confirmación a WhatsApp
+                </button>
+                <button class="btn btn-outline btn-block" id="close-modal-btn">
+                    Cerrar ventana
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript principal -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
