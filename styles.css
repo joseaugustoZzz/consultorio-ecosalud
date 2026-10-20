@@ -1359,93 +1359,93 @@ footer {
 }
 
 /* ==========================================================================
-   20. DISEÑO RESPONSIVO (ADAPTACIÓN A TABLETS Y TELÉFONOS MÓVILES)
-   ========================================================================== 
-   ¿CÓMO EXPLICAR ESTA SECCIÓN? (Fácil de entender y defender):
-   El diseño responsivo utiliza "Media Queries" (@media).
-   Le indican al navegador qué reglas visuales aplicar según el ancho de pantalla.
-   
-   Estructurado en 2 puntos de control simples:
-   1) max-width: 900px -> Pantallas medianas (Tablets):
-      - Pasa los elementos de 2 o 3 columnas a 1 columna vertical (Grid 1fr).
-      - Activa el botón de menú móvil tipo "hamburguesa".
-   
-   2) max-width: 480px -> Pantallas pequeñas (Teléfonos móviles):
-      - Ajusta tamaños de texto y reduce espacios innecesarios.
-      - Pone los botones a ancho completo para tocarlos fácilmente con el pulgar.
+   20. DISEÑO RESPONSIVO (ADAPTACIÓN A TABLETS Y TELÉFONOS CELULARES)
+   ==========================================================================
+   ¿QUÉ ES EL DISEÑO RESPONSIVO?
+   Es la técnica que permite que la página web cambie su tamaño y distribución
+   automáticamente para verse ordenada en computadoras, tablets y celulares.
+
+   ¿QUÉ ES UNA MEDIA QUERY (@media)?
+   Es una regla condicional de CSS. Le dice al navegador:
+   "Si el ancho de la pantalla es menor o igual a X píxeles, aplica estos estilos".
    ========================================================================== */
 
-/* --- 1. TABLETS Y PANTALLAS MEDIANAS (Hasta 900px) --- */
+/* ==========================================================================
+   PUNTO DE CONTROL 1: TABLETS Y PANTALLAS MEDIANAS (Hasta 900 píxeles)
+   ========================================================================== */
 @media (max-width: 900px) {
 
-    /* Ocultamos la barra superior para no sobrecargar la pantalla */
+    /* 1. Barra superior: se oculta porque en pantallas medianas satura el espacio */
     .top-bar {
-        display: none;
+        display: none; /* none = hace invisible la barra superior */
     }
 
-    /* Mostramos el botón de menú hamburguesa */
+    /* 2. Botón menú hamburguesa (☰): se hace visible para poder abrir la navegación */
     .menu-toggle {
-        display: block;
+        display: block; /* block = muestra el botón en pantalla */
     }
 
-    /* Ocultamos los enlaces del menú y los convertimos en lista desplegable */
+    /* 3. Menú de enlaces: se oculta por defecto y se prepara como lista desplegable */
     .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--bg-white);
-        flex-direction: column;
-        padding: 18px 20px;
-        border-bottom: 1px solid var(--color-border);
-        box-shadow: var(--shadow-card);
-        gap: 14px;
+        display: none;             /* Oculta los enlaces mientras el menú esté cerrado */
+        position: absolute;        /* Permite ubicar la lista flotando bajo la barra */
+        top: 100%;                 /* Se posiciona exactamente debajo del encabezado */
+        left: 0;                   /* Inicia desde el borde izquierdo */
+        width: 100%;               /* Se expande al 100% del ancho de la pantalla */
+        background: var(--bg-white); /* Fondo blanco sólido para que no transparente */
+        flex-direction: column;    /* Coloca los enlaces uno debajo de otro en vertical */
+        padding: 18px 20px;        /* Espacio interno de separación para mayor comodidad */
+        border-bottom: 1px solid var(--color-border); /* Línea divisoria inferior */
+        box-shadow: var(--shadow-card); /* Sombra suave para dar efecto de elevación */
+        gap: 14px;                 /* 14px de separación entre cada enlace */
     }
 
-    /* Al presionar el botón en celular, JS agrega .active y se muestra */
+    /* 4. Menú activo: cuando el usuario presiona el botón ☰, JavaScript agrega .active y se muestra */
     .nav-links.active {
-        display: flex;
+        display: flex; /* flex = hace visible el menú en modo columna */
     }
 
-    /* Convertimos todas las secciones de varias columnas a 1 sola columna vertical */
-    .hero-grid,
-    .about-grid,
-    .about-points,
-    .booking-layout,
-    .contact-grid,
-    .steps-grid,
-    .team-grid,
-    .testimonials-grid,
-    .footer-grid,
-    .hero-stats-row,
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 25px;
+    /* 5. Cuadrículas principales: todas las secciones de 2 o 3 columnas pasan a 1 sola columna vertical */
+    .hero-grid,          /* Portada inicial */
+    .about-grid,         /* Sección nosotros */
+    .about-points,       /* Puntos clave de la clínica */
+    .booking-layout,     /* Sección de reservas y comprobantes */
+    .contact-grid,       /* Información de contacto y mapa */
+    .steps-grid,         /* Los 3 pasos de atención */
+    .team-grid,          /* Médicos especialistas */
+    .testimonials-grid,  /* Opiniones de pacientes */
+    .footer-grid,        /* Columnas del pie de página */
+    .hero-stats-row,     /* Estadísticas del Hero */
+    .form-row {          /* Filas de 2 campos en el formulario */
+        grid-template-columns: 1fr; /* 1fr = 1 sola columna al 100% del ancho disponible */
+        gap: 25px;                  /* Separación vertical de 25px entre cada elemento */
     }
 
-    /* Barra de búsqueda y llamada a la acción en una sola columna */
+    /* 6. Barra de búsqueda y banner de servicios: alineados en columna vertical */
     .services-filter-bar,
     .services-cta-banner {
-        flex-direction: column;
-        align-items: stretch;
-        text-align: center;
+        flex-direction: column; /* Alinea los elementos verticalmente */
+        align-items: stretch;   /* Estira los elementos al ancho completo */
+        text-align: center;     /* Centra los textos */
     }
 
+    /* 7. Caja de búsqueda: ancho completo en tablets para facilitar la escritura */
     .search-field {
-        min-width: 100%;
+        min-width: 100%; /* Ocupa el 100% del ancho del contenedor */
     }
 
-    /* Ocultamos el texto flotante de WhatsApp, dejando solo el botón circular */
+    /* 8. Botón de WhatsApp: se oculta el texto flotante para no tapar la pantalla */
     .whatsapp-bubble {
-        display: none;
+        display: none; /* Deja únicamente el botón circular verde */
     }
 }
 
-/* --- 2. TELÉFONOS MÓVILES (Hasta 480px) --- */
+/* ==========================================================================
+   PUNTO DE CONTROL 2: TELÉFONOS CELULARES (Hasta 480 píxeles)
+   ========================================================================== */
 @media (max-width: 480px) {
 
-    /* Reducimos el relleno de las secciones para aprovechar mejor la pantalla */
+    /* 1. Secciones generales: se reduce el relleno vertical de 80px a 45px para evitar un scroll infinito */
     .hero,
     .services-section,
     .about-section,
@@ -1453,76 +1453,78 @@ footer {
     .testimonials-section,
     .faq-section,
     .contact-section {
-        padding: 45px 0;
+        padding: 45px 0; /* 45px arriba y abajo, 0 a los lados */
     }
 
-    /* Títulos adaptados a celulares para evitar que se desborden o corten */
+    /* 2. Títulos principales: tamaño reducido para que entren completos en pantallas angostas */
     .hero-title {
-        font-size: 26px;
-        line-height: 1.25;
+        font-size: 26px;   /* Letra más pequeña (en PC era 42px) */
+        line-height: 1.25; /* Altura de línea compacta */
     }
 
     .section-title {
-        font-size: 22px;
+        font-size: 22px;   /* Tamaño adecuado para títulos de sección (en PC era 32px) */
     }
 
-    /* Botones de acción: apilados verticalmente y al 100% (fáciles de tocar) */
+    /* 3. Botones del Hero: apilados verticalmente al 100% de ancho para pulsarlos fácil con el pulgar */
     .hero-buttons {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: column; /* Un botón debajo del otro */
+        gap: 10px;              /* 10px de distancia entre botones */
     }
 
     .hero-buttons .btn {
-        width: 100%;
+        width: 100%; /* Botón al 100% de ancho (diseño móvil táctil) */
     }
 
-    /* Altura moderada para la foto principal y el mapa de contacto */
+    /* 4. Imagen de portada: altura moderada para no tapar toda la pantalla del celular */
     .hero-image-card img {
-        height: 220px;
+        height: 220px; /* Altura controlada de 220px */
     }
 
+    /* 5. Mapa de ubicación: altura compacta para no bloquear el desplazamiento con el dedo */
     .map-card iframe {
-        min-height: 250px;
+        min-height: 250px; /* Altura cómoda de 250px */
     }
 
-    /* Etiqueta flotante de la foto principal adaptada a celular */
+    /* 6. Etiqueta sobre la foto: posición y tamaño ajustados a pantallas pequeñas */
     .hero-image-badge {
-        bottom: 12px;
-        left: 12px;
-        padding: 8px 12px;
+        bottom: 12px;       /* 12px desde abajo */
+        left: 12px;         /* 12px desde la izquierda */
+        padding: 8px 12px;  /* Relleno interno compacto */
     }
 
-    /* Servicios: 1 tarjeta por fila para que se lean cómodamente */
+    /* 7. Tarjetas de servicios: 1 tarjeta por fila al 100% de ancho sin desbordes laterales */
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Una tarjeta por fila */
     }
 
-    /* Paneles y formularios con relleno compacto para ganar espacio */
+    /* 8. Paneles de formulario y citas: menos relleno lateral para ganar espacio de escritura */
     .form-panel,
     .records-panel {
-        padding: 18px 14px;
+        padding: 18px 14px; /* Relleno compacto de 14px a los costados */
     }
 
+    /* 9. Campos de texto y listas desplegables: tamaño de letra a 15px para evitar zoom forzado en celulares */
     .form-field input,
     .form-field select,
     .search-field input {
-        font-size: 15px; /* Evita que el navegador del teléfono haga zoom brusco */
+        font-size: 15px; /* Tamaño táctil que previene zoom automático */
     }
 
-    /* Cabecera del ticket de cita médica: permite salto de línea limpio */
+    /* 10. Cabecera del comprobante de cita: permite saltos de línea limpios si el nombre es largo */
     .ticket-header {
-        flex-wrap: wrap;
-        gap: 6px;
+        flex-wrap: wrap; /* Permite que los datos bajen si no caben en una línea */
+        gap: 6px;        /* 6px de separación */
     }
 
-    /* Modal de confirmación ajustado al tamaño de pantalla móvil */
+    /* 11. Ventana modal de confirmación: relleno adaptado a teléfonos pequeños */
     .modal-card {
-        padding: 20px 16px;
+        padding: 20px 16px; /* Acolchado interno compacto */
     }
 
-    /* Botón flotante de WhatsApp colocado cómodamente en la esquina */
+    /* 12. Botón flotante de WhatsApp: ubicado en la esquina al alcance del pulgar */
     .whatsapp-widget {
-        bottom: 16px;
-        right: 16px;
+        bottom: 16px; /* 16px de la parte inferior */
+        right: 16px;  /* 16px del borde derecho */
     }
 }
